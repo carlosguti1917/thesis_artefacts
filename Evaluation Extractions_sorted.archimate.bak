@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="EA Mining Exchange Model" id="id-ea-mining-exchange-model-1" version="5.0.0">
+  <folder name="Strategy" id="id-3807ed92faef499586eeb99e18564cac" type="strategy"/>
+  <folder name="Business" id="id-1012b45f345d41c7a0b77c8d597894c3" type="business">
+    <element xsi:type="archimate:BusinessProcess" name="Process_Application" id="id-process-Process_Application"/>
+    <element xsi:type="archimate:BusinessActor" name="HealthCareApp" id="id-actor-HealthCareApp"/>
+    <element xsi:type="archimate:BusinessProcess" name="Process_Insurance" id="id-process-Process_Insurance"/>
+    <element xsi:type="archimate:BusinessEvent" name="Send Customer Information" id="id-event-1">
+      <property key="uri" value="POST_/sandbox/Process_Application/v1/Customer/SendInformation"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Save Process Status" id="id-event-2">
+      <property key="uri" value="POST_/sandbox/Process_Insurance/v1/Consultant/SaveProcessStatus"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Send Customer Update" id="id-event-3">
+      <property key="uri" value="POST_/sandbox/Process_Application/v1/Customer/SendingCustomerUpdate"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Send Contract" id="id-event-4">
+      <property key="uri" value="POST_/sandbox/Process_Insurance/v1/Consultant/SendContract"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Save Customer Data" id="id-event-5">
+      <property key="uri" value="POST_/sandbox/Process_Insurance/v1/Consultant/SaveCustomerData"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Assess Application" id="id-event-6">
+      <property key="uri" value="POST_/sandbox/Process_Insurance/v1/Consultant/AssessApplication"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Inform About Offer" id="id-event-7">
+      <property key="uri" value="POST_/sandbox/Process_Insurance/v1/Consultant/InformAboutOffer"/>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="ecommerce" id="id-process-ecommerce"/>
+    <element xsi:type="archimate:BusinessActor" name="acmeapp" id="id-actor-acmeapp"/>
+    <element xsi:type="archimate:BusinessEvent" name="Create Order" id="id-event-8">
+      <property key="uri" value="POST_/sandbox/ecommerce/v1/orders"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Create Cart" id="id-event-9">
+      <property key="uri" value="POST_/sandbox/ecommerce/v1/carts"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Add Item to Cart" id="id-event-10">
+      <property key="uri" value="POST_/sandbox/ecommerce/v1/carts/x/items"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Get Carts" id="id-event-11">
+      <property key="uri" value="GET_/sandbox/ecommerce/v1/carts/x"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Set Delivery Address" id="id-event-12">
+      <property key="uri" value="POST_/sandbox/ecommerce/v1/carts/x/deliveryaddress"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Set Payment Method" id="id-event-13">
+      <property key="uri" value="POST_/sandbox/ecommerce/v1/carts/paymentmethod"/>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="handle-claim" id="id-process-handle-claim"/>
+    <element xsi:type="archimate:BusinessActor" name="OpenApp" id="id-actor-OpenApp"/>
+    <element xsi:type="archimate:BusinessProcess" name="payment" id="id-process-payment"/>
+    <element xsi:type="archimate:BusinessEvent" name="Handle Claim" id="id-event-14">
+      <property key="uri" value="POST_/sandbox/handle-claim/v1/claims"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Notify Stackholders" id="id-event-15">
+      <property key="uri" value="POST_/sandbox/handle-claim/v1/claims/x/notify-stackholders"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Handle Claim Validations" id="id-event-16">
+      <property key="uri" value="POST_/sandbox/handle-claim/v1/claims/x/validations"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Handle Claim Investigation Result" id="id-event-17">
+      <property key="uri" value="POST_/sandbox/handle-claim/v1/claims/x/investigation-result"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Post Payments" id="id-event-18">
+      <property key="uri" value="POST_/sandbox/payment/v1/payments"/>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="ProcessBusinessUnit1" id="id-process-ProcessBusinessUnit1"/>
+    <element xsi:type="archimate:BusinessActor" name="CamundaApp" id="id-actor-CamundaApp"/>
+    <element xsi:type="archimate:BusinessProcess" name="ProcessBusinessUnit2" id="id-process-ProcessBusinessUnit2"/>
+    <element xsi:type="archimate:BusinessProcess" name="ProcessBusinessUnit3" id="id-process-ProcessBusinessUnit3"/>
+    <element xsi:type="archimate:BusinessEvent" name="Get Shop" id="id-event-19">
+      <property key="uri" value="GET_/sandbox/ProcessBusinessUnit1/v1/Shop"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Get Customer" id="id-event-20">
+      <property key="uri" value="GET_/sandbox/ProcessBusinessUnit1/v1/Customer"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Request Loyalty Card Association" id="id-event-21">
+      <property key="uri" value="POST_/sandbox/ProcessBusinessUnit1/v1/Association/RequestLoyaltyCardAssociationOrder"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Promise Loyalty Card Association" id="id-event-22">
+      <property key="uri" value="POST_/sandbox/ProcessBusinessUnit2/v1/Association/PromiseLoyaltyCardAssociationOrder"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Get Card" id="id-event-23">
+      <property key="uri" value="GET_/sandbox/ProcessBusinessUnit2/v1/Card/x/x"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Promise Purchase Consumer Order" id="id-event-24">
+      <property key="uri" value="POST_/sandbox/ProcessBusinessUnit3/v1/Purchase/PromisePurchaseConsumerOrder"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Declare Purchase Order" id="id-event-25">
+      <property key="uri" value="POST_/sandbox/ProcessBusinessUnit3/v1/Purchase/DeclarePurchaseConsumerOrder"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Accept Purchase Consumer Order" id="id-event-26">
+      <property key="uri" value="POST_/sandbox/ProcessBusinessUnit2/v1/Purchase/AcceptPurchaseConsumerOrder"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Declare Loyalty Card Association" id="id-event-27">
+      <property key="uri" value="POST_/sandbox/ProcessBusinessUnit2/v1/Association/DeclareLoyaltyCardAssociationOrder"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Accept Loyalty Card Association Order" id="id-event-28">
+      <property key="uri" value="POST_/sandbox/ProcessBusinessUnit1/v1/Association/AcceptLoyaltyCardAssociationOrder"/>
+    </element>
+    <element xsi:type="archimate:BusinessEvent" name="Associate Loyalty Card" id="id-event-29">
+      <property key="uri" value="POST_/sandbox/ProcessBusinessUnit2/v1/Association/AssociateLoyaltyCard"/>
+    </element>
+    <element xsi:type="archimate:BusinessFunction" name="Business Function" id="id-8e662a867ba743e3bebfc02053981969"/>
+    <element xsi:type="archimate:BusinessFunction" name="Business Function" id="id-e33069eb6b8449f28b2a564cf99c349b"/>
+    <element xsi:type="archimate:BusinessProcess" name="Business Process" id="id-39c06f7b0eaf46a5b33b037154661176"/>
+    <element xsi:type="archimate:BusinessProcess" name="Business Process" id="id-88621ceb953a4115b1a51db35e52ea20"/>
+  </folder>
+  <folder name="Application" id="id-ab69790a4acf4466b96a1929dfd6a1c3" type="application">
+    <element xsi:type="archimate:DataObject" name="Process Application" id="id-domain-1"/>
+    <element xsi:type="archimate:DataObject" name="Customer" id="id-entity-1">
+      <property key="uri" value="Customer"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Insurance Process" id="id-domain-2"/>
+    <element xsi:type="archimate:DataObject" name="Consultant" id="id-entity-2">
+      <property key="uri" value="Consultant"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Business Process 1" id="id-domain-3"/>
+    <element xsi:type="archimate:DataObject" name="Shop" id="id-entity-3">
+      <property key="uri" value="Shop"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Association" id="id-entity-4">
+      <property key="uri" value="Association"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Business Process 2" id="id-domain-4"/>
+    <element xsi:type="archimate:DataObject" name="Card" id="id-entity-5">
+      <property key="uri" value="Card"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Purchase" id="id-entity-6">
+      <property key="uri" value="Purchase"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Business Process 3" id="id-domain-5"/>
+    <element xsi:type="archimate:DataObject" name="Handle Claim" id="id-domain-6"/>
+    <element xsi:type="archimate:DataObject" name="Claims" id="id-entity-7">
+      <property key="uri" value="claims"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Capture Informations" id="id-entity-8">
+      <property key="uri" value="capture-informations"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Notify Stackholders" id="id-entity-9">
+      <property key="uri" value="notify-stackholders"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Validations" id="id-entity-10">
+      <property key="uri" value="validations"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Investigation Result" id="id-entity-11">
+      <property key="uri" value="investigation-result"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Ecommerce" id="id-domain-7"/>
+    <element xsi:type="archimate:DataObject" name="Orders" id="id-entity-12">
+      <property key="uri" value="orders"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Carts" id="id-entity-13">
+      <property key="uri" value="carts"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Items" id="id-entity-14">
+      <property key="uri" value="items"/>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Delivery Address" id="id-entity-15">
+      <property key="uri" value="deliveryaddress"/>
+    </element>
+  </folder>
+  <folder name="Technology &amp; Physical" id="id-05e4668c903b46e792fbc32a2086db9a" type="technology"/>
+  <folder name="Motivation" id="id-fc15939a956542d4918d4a07764fe7aa" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="id-c78a02bec3d7419a8c9350cd2f6a0a6e" type="implementation_migration"/>
+  <folder name="Other" id="id-7b1ce6923a724f91a455ee8b25f5b302" type="other"/>
+  <folder name="Relations" id="id-feafc94054a14a398432b07883594480" type="relations">
+    <element xsi:type="archimate:ServingRelationship" name="id-relation-HealthCareApp-id-process-Process_Application" id="id-relation-HealthCareApp-id-process-Process_Application" source="id-process-Process_Application" target="id-actor-HealthCareApp"/>
+    <element xsi:type="archimate:ServingRelationship" name="id-relation-HealthCareApp-id-process-Process_Insurance" id="id-relation-HealthCareApp-id-process-Process_Insurance" source="id-process-Process_Insurance" target="id-actor-HealthCareApp"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-1" id="id-relation-1" source="id-process-Process_Application" target="id-event-1"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-2" id="id-relation-2" source="id-process-Process_Insurance" target="id-event-2"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-3" id="id-relation-3" source="id-process-Process_Application" target="id-event-3"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-4" id="id-relation-4" source="id-process-Process_Insurance" target="id-event-4"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-5" id="id-relation-5" source="id-process-Process_Insurance" target="id-event-5"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-6" id="id-relation-6" source="id-process-Process_Insurance" target="id-event-6"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-7" id="id-relation-7" source="id-process-Process_Insurance" target="id-event-7"/>
+    <element xsi:type="archimate:ServingRelationship" name="id-relation-acmeapp-id-process-ecommerce" id="id-relation-acmeapp-id-process-ecommerce" source="id-process-ecommerce" target="id-actor-acmeapp"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-8" id="id-relation-8" source="id-process-ecommerce" target="id-event-8"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-9" id="id-relation-9" source="id-process-ecommerce" target="id-event-9"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-10" id="id-relation-10" source="id-process-ecommerce" target="id-event-10"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-11" id="id-relation-11" source="id-process-ecommerce" target="id-event-11"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-12" id="id-relation-12" source="id-process-ecommerce" target="id-event-12"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-13" id="id-relation-13" source="id-process-ecommerce" target="id-event-13"/>
+    <element xsi:type="archimate:ServingRelationship" name="id-relation-OpenApp-id-process-handle-claim" id="id-relation-OpenApp-id-process-handle-claim" source="id-process-handle-claim" target="id-actor-OpenApp"/>
+    <element xsi:type="archimate:ServingRelationship" name="id-relation-OpenApp-id-process-payment" id="id-relation-OpenApp-id-process-payment" source="id-process-payment" target="id-actor-OpenApp"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-14" id="id-relation-14" source="id-process-handle-claim" target="id-event-14"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-15" id="id-relation-15" source="id-process-handle-claim" target="id-event-15"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-16" id="id-relation-16" source="id-process-handle-claim" target="id-event-16"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-17" id="id-relation-17" source="id-process-handle-claim" target="id-event-17"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-18" id="id-relation-18" source="id-process-payment" target="id-event-18"/>
+    <element xsi:type="archimate:ServingRelationship" name="id-relation-CamundaApp-id-process-ProcessBusinessUnit1" id="id-relation-CamundaApp-id-process-ProcessBusinessUnit1" source="id-process-ProcessBusinessUnit1" target="id-actor-CamundaApp"/>
+    <element xsi:type="archimate:ServingRelationship" name="id-relation-CamundaApp-id-process-ProcessBusinessUnit2" id="id-relation-CamundaApp-id-process-ProcessBusinessUnit2" source="id-process-ProcessBusinessUnit2" target="id-actor-CamundaApp"/>
+    <element xsi:type="archimate:ServingRelationship" name="id-relation-CamundaApp-id-process-ProcessBusinessUnit3" id="id-relation-CamundaApp-id-process-ProcessBusinessUnit3" source="id-process-ProcessBusinessUnit3" target="id-actor-CamundaApp"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-19" id="id-relation-19" source="id-process-ProcessBusinessUnit1" target="id-event-19"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-20" id="id-relation-20" source="id-process-ProcessBusinessUnit1" target="id-event-20"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-21" id="id-relation-21" source="id-process-ProcessBusinessUnit1" target="id-event-21"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-22" id="id-relation-22" source="id-process-ProcessBusinessUnit2" target="id-event-22"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-23" id="id-relation-23" source="id-process-ProcessBusinessUnit2" target="id-event-23"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-24" id="id-relation-24" source="id-process-ProcessBusinessUnit3" target="id-event-24"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-25" id="id-relation-25" source="id-process-ProcessBusinessUnit3" target="id-event-25"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-26" id="id-relation-26" source="id-process-ProcessBusinessUnit2" target="id-event-26"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-27" id="id-relation-27" source="id-process-ProcessBusinessUnit2" target="id-event-27"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-28" id="id-relation-28" source="id-process-ProcessBusinessUnit1" target="id-event-28"/>
+    <element xsi:type="archimate:AssociationRelationship" name="id-relation-29" id="id-relation-29" source="id-process-ProcessBusinessUnit2" target="id-event-29"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-2" id="id-relation-be-2" source="id-event-1" target="id-event-3"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-3" id="id-relation-be-3" source="id-event-3" target="id-event-2"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-4" id="id-relation-be-4" source="id-event-2" target="id-event-4"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-5" id="id-relation-be-5" source="id-event-4" target="id-event-5"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-6" id="id-relation-be-6" source="id-event-5" target="id-event-6"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-7" id="id-relation-be-7" source="id-event-6" target="id-event-7"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-9" id="id-relation-be-9" source="id-event-8" target="id-event-9"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-10" id="id-relation-be-10" source="id-event-9" target="id-event-10"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-11" id="id-relation-be-11" source="id-event-10" target="id-event-11"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-12" id="id-relation-be-12" source="id-event-11" target="id-event-12"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-13" id="id-relation-be-13" source="id-event-12" target="id-event-13"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-15" id="id-relation-be-15" source="id-event-14" target="id-event-15"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-16" id="id-relation-be-16" source="id-event-15" target="id-event-16"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-17" id="id-relation-be-17" source="id-event-16" target="id-event-17"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-18" id="id-relation-be-18" source="id-event-17" target="id-event-18"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-20" id="id-relation-be-20" source="id-event-19" target="id-event-20"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-21" id="id-relation-be-21" source="id-event-20" target="id-event-21"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-22" id="id-relation-be-22" source="id-event-21" target="id-event-28"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-23" id="id-relation-be-23" source="id-event-28" target="id-event-22"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-24" id="id-relation-be-24" source="id-event-22" target="id-event-23"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-25" id="id-relation-be-25" source="id-event-23" target="id-event-26"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-26" id="id-relation-be-26" source="id-event-26" target="id-event-27"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-27" id="id-relation-be-27" source="id-event-27" target="id-event-29"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-28" id="id-relation-be-28" source="id-event-29" target="id-event-24"/>
+    <element xsi:type="archimate:FlowRelationship" name="id-relation-be-29" id="id-relation-be-29" source="id-event-24" target="id-event-25"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-1" id="id-relation-de-1" source="id-domain-1" target="id-entity-1"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-2" id="id-relation-de-2" source="id-domain-2" target="id-entity-2"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-3" id="id-relation-de-3" source="id-domain-3" target="id-entity-3"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-4" id="id-relation-de-4" source="id-domain-3" target="id-entity-4"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-5" id="id-relation-de-5" source="id-domain-4" target="id-entity-5"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-6" id="id-relation-de-6" source="id-domain-4" target="id-entity-6"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-7" id="id-relation-de-7" source="id-domain-6" target="id-entity-7"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-8" id="id-relation-de-8" source="id-domain-6" target="id-entity-8"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-9" id="id-relation-de-9" source="id-domain-6" target="id-entity-9"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-10" id="id-relation-de-10" source="id-domain-6" target="id-entity-10"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-11" id="id-relation-de-11" source="id-domain-6" target="id-entity-11"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-12" id="id-relation-de-12" source="id-domain-7" target="id-entity-12"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-13" id="id-relation-de-13" source="id-domain-7" target="id-entity-13"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-14" id="id-relation-de-14" source="id-domain-7" target="id-entity-14"/>
+    <element xsi:type="archimate:AggregationRelationship" name="id-relation-de-15" id="id-relation-de-15" source="id-domain-7" target="id-entity-15"/>
+  </folder>
+  <folder name="Views" id="id-3dd074d42bc14e798c54a21ad4f48dc9" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="API extracted process view" id="id-view-ea-process-view" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-1" archimateElement="id-process-Process_Application">
+        <bounds x="350" y="50" width="7260" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-1" source="id-node-all-1" target="id-node-all-2" archimateRelationship="id-relation-HealthCareApp-id-process-Process_Application"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-2" targetConnections="id-connection-all-1 id-connection-all-2" archimateElement="id-actor-HealthCareApp">
+        <bounds x="25" y="750" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-3" archimateElement="id-process-Process_Insurance">
+        <bounds x="350" y="300" width="7260" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-2" source="id-node-all-3" target="id-node-all-2" archimateRelationship="id-relation-HealthCareApp-id-process-Process_Insurance"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-4" archimateElement="id-event-1">
+        <bounds x="440" y="100" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-3" source="id-node-all-4" target="id-node-all-6" archimateRelationship="id-relation-be-2"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-5" targetConnections="id-connection-all-5" archimateElement="id-event-2">
+        <bounds x="440" y="350" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-4" source="id-node-all-5" target="id-node-all-7" archimateRelationship="id-relation-be-4"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-6" targetConnections="id-connection-all-3" archimateElement="id-event-3">
+        <bounds x="780" y="100" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-5" source="id-node-all-6" target="id-node-all-5" archimateRelationship="id-relation-be-3"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-7" targetConnections="id-connection-all-4" archimateElement="id-event-4">
+        <bounds x="780" y="350" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-6" source="id-node-all-7" target="id-node-all-8" archimateRelationship="id-relation-be-5"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-8" targetConnections="id-connection-all-6" archimateElement="id-event-5">
+        <bounds x="1120" y="350" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-7" source="id-node-all-8" target="id-node-all-9" archimateRelationship="id-relation-be-6"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-9" targetConnections="id-connection-all-7" archimateElement="id-event-6">
+        <bounds x="1460" y="350" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-8" source="id-node-all-9" target="id-node-all-10" archimateRelationship="id-relation-be-7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-10" targetConnections="id-connection-all-8" archimateElement="id-event-7">
+        <bounds x="1800" y="350" width="240" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-11" archimateElement="id-process-ecommerce">
+        <bounds x="350" y="550" width="7260" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-9" source="id-node-all-11" target="id-node-all-12" archimateRelationship="id-relation-acmeapp-id-process-ecommerce"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-12" targetConnections="id-connection-all-9" archimateElement="id-actor-acmeapp">
+        <bounds x="25" y="375" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-13" archimateElement="id-event-8">
+        <bounds x="1800" y="600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-10" source="id-node-all-13" target="id-node-all-14" archimateRelationship="id-relation-be-9"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-14" targetConnections="id-connection-all-10" archimateElement="id-event-9">
+        <bounds x="1800" y="600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-11" source="id-node-all-14" target="id-node-all-15" archimateRelationship="id-relation-be-10"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-15" targetConnections="id-connection-all-11" archimateElement="id-event-10">
+        <bounds x="2140" y="600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-12" source="id-node-all-15" target="id-node-all-16" archimateRelationship="id-relation-be-11"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-16" targetConnections="id-connection-all-12" archimateElement="id-event-11">
+        <bounds x="2480" y="600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-13" source="id-node-all-16" target="id-node-all-17" archimateRelationship="id-relation-be-12"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-17" targetConnections="id-connection-all-13" archimateElement="id-event-12">
+        <bounds x="2820" y="600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-14" source="id-node-all-17" target="id-node-all-18" archimateRelationship="id-relation-be-13"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-18" targetConnections="id-connection-all-14" archimateElement="id-event-13">
+        <bounds x="3160" y="600" width="240" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-19" archimateElement="id-process-handle-claim">
+        <bounds x="350" y="800" width="7260" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-15" source="id-node-all-19" target="id-node-all-20" archimateRelationship="id-relation-OpenApp-id-process-handle-claim"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-20" targetConnections="id-connection-all-15 id-connection-all-16" archimateElement="id-actor-OpenApp">
+        <bounds x="25" y="250" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-21" archimateElement="id-process-payment">
+        <bounds x="350" y="1050" width="7260" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-16" source="id-node-all-21" target="id-node-all-20" archimateRelationship="id-relation-OpenApp-id-process-payment"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-22" archimateElement="id-event-14">
+        <bounds x="3160" y="850" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-17" source="id-node-all-22" target="id-node-all-23" archimateRelationship="id-relation-be-15"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-23" targetConnections="id-connection-all-17" archimateElement="id-event-15">
+        <bounds x="3160" y="850" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-18" source="id-node-all-23" target="id-node-all-24" archimateRelationship="id-relation-be-16"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-24" targetConnections="id-connection-all-18" archimateElement="id-event-16">
+        <bounds x="3500" y="850" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-19" source="id-node-all-24" target="id-node-all-25" archimateRelationship="id-relation-be-17"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-25" targetConnections="id-connection-all-19" archimateElement="id-event-17">
+        <bounds x="3840" y="850" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-20" source="id-node-all-25" target="id-node-all-26" archimateRelationship="id-relation-be-18"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-26" targetConnections="id-connection-all-20" archimateElement="id-event-18">
+        <bounds x="3840" y="1100" width="240" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-27" archimateElement="id-process-ProcessBusinessUnit1">
+        <bounds x="350" y="1300" width="7260" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-21" source="id-node-all-27" target="id-node-all-28" archimateRelationship="id-relation-CamundaApp-id-process-ProcessBusinessUnit1"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-28" targetConnections="id-connection-all-21 id-connection-all-22 id-connection-all-23" archimateElement="id-actor-CamundaApp">
+        <bounds x="25" y="187" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-29" archimateElement="id-process-ProcessBusinessUnit2">
+        <bounds x="350" y="1550" width="7260" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-22" source="id-node-all-29" target="id-node-all-28" archimateRelationship="id-relation-CamundaApp-id-process-ProcessBusinessUnit2"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-30" archimateElement="id-process-ProcessBusinessUnit3">
+        <bounds x="350" y="1800" width="7260" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-23" source="id-node-all-30" target="id-node-all-28" archimateRelationship="id-relation-CamundaApp-id-process-ProcessBusinessUnit3"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-31" archimateElement="id-event-19">
+        <bounds x="3840" y="1350" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-24" source="id-node-all-31" target="id-node-all-32" archimateRelationship="id-relation-be-20"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-32" targetConnections="id-connection-all-24" archimateElement="id-event-20">
+        <bounds x="3840" y="1350" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-25" source="id-node-all-32" target="id-node-all-33" archimateRelationship="id-relation-be-21"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-33" targetConnections="id-connection-all-25" archimateElement="id-event-21">
+        <bounds x="4180" y="1350" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-26" source="id-node-all-33" target="id-node-all-40" archimateRelationship="id-relation-be-22"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-34" targetConnections="id-connection-all-32" archimateElement="id-event-22">
+        <bounds x="4180" y="1600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-27" source="id-node-all-34" target="id-node-all-35" archimateRelationship="id-relation-be-24"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-35" targetConnections="id-connection-all-27" archimateElement="id-event-23">
+        <bounds x="4520" y="1600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-28" source="id-node-all-35" target="id-node-all-38" archimateRelationship="id-relation-be-25"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-36" targetConnections="id-connection-all-33" archimateElement="id-event-24">
+        <bounds x="4520" y="1850" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-29" source="id-node-all-36" target="id-node-all-37" archimateRelationship="id-relation-be-29"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-37" targetConnections="id-connection-all-29" archimateElement="id-event-25">
+        <bounds x="4860" y="1850" width="240" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-38" targetConnections="id-connection-all-28" archimateElement="id-event-26">
+        <bounds x="4860" y="1600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-30" source="id-node-all-38" target="id-node-all-39" archimateRelationship="id-relation-be-26"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-39" targetConnections="id-connection-all-30" archimateElement="id-event-27">
+        <bounds x="5200" y="1600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-31" source="id-node-all-39" target="id-node-all-41" archimateRelationship="id-relation-be-27"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-40" targetConnections="id-connection-all-26" archimateElement="id-event-28">
+        <bounds x="5200" y="1350" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-32" source="id-node-all-40" target="id-node-all-34" archimateRelationship="id-relation-be-23"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-all-41" targetConnections="id-connection-all-31" archimateElement="id-event-29">
+        <bounds x="5540" y="1600" width="240" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-all-33" source="id-node-all-41" target="id-node-all-36" archimateRelationship="id-relation-be-28"/>
+      </child>
+      <documentation>Process View Mined from API Logs.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="API extracted Data Relation view" id="id-view-ea-data-relation-view" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-node-42" archimateElement="id-domain-1">
+        <bounds x="250" y="60" width="120" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-34" source="id-node-42" target="id-node-43" archimateRelationship="id-relation-de-1"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-43" targetConnections="id-connection-34" archimateElement="id-entity-1">
+        <bounds x="500" y="110" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-44" archimateElement="id-domain-2">
+        <bounds x="250" y="160" width="120" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-35" source="id-node-44" target="id-node-45" archimateRelationship="id-relation-de-2"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-45" targetConnections="id-connection-35" archimateElement="id-entity-2">
+        <bounds x="500" y="210" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-46" archimateElement="id-domain-3">
+        <bounds x="250" y="310" width="120" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-36" source="id-node-46" target="id-node-47" archimateRelationship="id-relation-de-3"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-37" source="id-node-46" target="id-node-48" archimateRelationship="id-relation-de-4"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-47" targetConnections="id-connection-36" archimateElement="id-entity-3">
+        <bounds x="500" y="310" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-48" targetConnections="id-connection-37" archimateElement="id-entity-4">
+        <bounds x="500" y="410" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-49" archimateElement="id-domain-4">
+        <bounds x="250" y="510" width="120" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-38" source="id-node-49" target="id-node-50" archimateRelationship="id-relation-de-5"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-39" source="id-node-49" target="id-node-51" archimateRelationship="id-relation-de-6"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-50" targetConnections="id-connection-38" archimateElement="id-entity-5">
+        <bounds x="500" y="510" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-51" targetConnections="id-connection-39" archimateElement="id-entity-6">
+        <bounds x="500" y="610" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-52" archimateElement="id-domain-5">
+        <bounds x="250" y="610" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-53" archimateElement="id-domain-6">
+        <bounds x="698" y="210" width="120" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-40" source="id-node-53" target="id-node-54" archimateRelationship="id-relation-de-7"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-41" source="id-node-53" target="id-node-55" archimateRelationship="id-relation-de-8"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-42" source="id-node-53" target="id-node-56" archimateRelationship="id-relation-de-9"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-43" source="id-node-53" target="id-node-57" archimateRelationship="id-relation-de-10"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-44" source="id-node-53" target="id-node-58" archimateRelationship="id-relation-de-11"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-54" targetConnections="id-connection-40" archimateElement="id-entity-7">
+        <bounds x="948" y="60" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-55" targetConnections="id-connection-41" archimateElement="id-entity-8">
+        <bounds x="948" y="160" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-56" targetConnections="id-connection-42" archimateElement="id-entity-9">
+        <bounds x="948" y="260" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-57" targetConnections="id-connection-43" archimateElement="id-entity-10">
+        <bounds x="948" y="360" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-58" targetConnections="id-connection-44" archimateElement="id-entity-11">
+        <bounds x="948" y="460" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-59" archimateElement="id-domain-7">
+        <bounds x="698" y="660" width="120" height="50"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-45" source="id-node-59" target="id-node-60" archimateRelationship="id-relation-de-12"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-46" source="id-node-59" target="id-node-61" archimateRelationship="id-relation-de-13"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-47" source="id-node-59" target="id-node-62" archimateRelationship="id-relation-de-14"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-48" source="id-node-59" target="id-node-63" archimateRelationship="id-relation-de-15"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-60" targetConnections="id-connection-45" archimateElement="id-entity-12">
+        <bounds x="948" y="560" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-61" targetConnections="id-connection-46" archimateElement="id-entity-13">
+        <bounds x="948" y="660" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-62" targetConnections="id-connection-47" archimateElement="id-entity-14">
+        <bounds x="948" y="760" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-63" targetConnections="id-connection-48" archimateElement="id-entity-15">
+        <bounds x="948" y="860" width="120" height="50"/>
+      </child>
+      <documentation>Data Relation View Mined from API Logs.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="API extracted process view for HealthCareApp" id="id-view-ea-HealthCareApp-process-view" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-node-1" targetConnections="id-connection-1 id-connection-4" archimateElement="id-actor-HealthCareApp">
+        <bounds x="156" y="240" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-2" archimateElement="id-process-Process_Application">
+        <bounds x="350" y="50" width="791" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-1" source="id-node-2" target="id-node-1" archimateRelationship="id-relation-HealthCareApp-id-process-Process_Application"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-eae96315c0e24e39b0ea969bb75f7ac8" source="id-node-2" target="id-node-3" archimateRelationship="id-relation-1"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-167c2aac6f094cff97c9c35deb6b5e3d" source="id-node-2" target="id-node-4" archimateRelationship="id-relation-3"/>
+        <child xsi:type="archimate:DiagramObject" id="id-node-3" targetConnections="id-eae96315c0e24e39b0ea969bb75f7ac8" archimateElement="id-event-1">
+          <bounds x="24" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-2" source="id-node-3" target="id-node-4" archimateRelationship="id-relation-be-2"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-4" targetConnections="id-connection-2 id-167c2aac6f094cff97c9c35deb6b5e3d" archimateElement="id-event-3">
+          <bounds x="240" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-3" source="id-node-4" target="id-node-6" archimateRelationship="id-relation-be-3"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-5" archimateElement="id-process-Process_Insurance">
+        <bounds x="350" y="324" width="791" height="216"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-4" source="id-node-5" target="id-node-1" archimateRelationship="id-relation-HealthCareApp-id-process-Process_Insurance"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-7b672acdb6154b1f835a01c82fb72f4a" source="id-node-5" target="id-node-6" archimateRelationship="id-relation-2"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9ebb5e8a0f944b35b7b2c9d72b3568df" source="id-node-5" target="id-node-7" archimateRelationship="id-relation-4"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-62f65e9c81664d2cb1d58759a497b00f" source="id-node-5" target="id-node-8" archimateRelationship="id-relation-5"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-214c0a4826a64889854e07531ef5100a" source="id-node-5" target="id-node-9" archimateRelationship="id-relation-6"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d523e2e3d1ac48c28e264ac602cfdf26" source="id-node-5" target="id-node-10" archimateRelationship="id-relation-7"/>
+        <child xsi:type="archimate:DiagramObject" id="id-node-6" targetConnections="id-connection-3 id-7b672acdb6154b1f835a01c82fb72f4a" archimateElement="id-event-2">
+          <bounds x="24" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-5" source="id-node-6" target="id-node-7" archimateRelationship="id-relation-be-4"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-7" targetConnections="id-connection-5 id-9ebb5e8a0f944b35b7b2c9d72b3568df" archimateElement="id-event-4">
+          <bounds x="240" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-6" source="id-node-7" target="id-node-8" archimateRelationship="id-relation-be-5"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-8" targetConnections="id-connection-6 id-62f65e9c81664d2cb1d58759a497b00f" archimateElement="id-event-5">
+          <bounds x="456" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-7" source="id-node-8" target="id-node-9" archimateRelationship="id-relation-be-6"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-9" targetConnections="id-connection-7 id-214c0a4826a64889854e07531ef5100a" archimateElement="id-event-6">
+          <bounds x="672" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-8" source="id-node-9" target="id-node-10" archimateRelationship="id-relation-be-7"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-10" targetConnections="id-connection-8 id-d523e2e3d1ac48c28e264ac602cfdf26" archimateElement="id-event-7">
+          <bounds x="24" y="144" width="109" height="50"/>
+        </child>
+      </child>
+      <documentation>Process View Mined from API Logs for Business Actor HealthCareApp.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="API extracted process view for acmeapp" id="id-view-ea-acmeapp-process-view" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-node-11" targetConnections="id-connection-9" archimateElement="id-actor-acmeapp">
+        <bounds x="180" y="60" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-12" archimateElement="id-process-ecommerce">
+        <bounds x="384" y="156" width="577" height="253"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-9" source="id-node-12" target="id-node-11" archimateRelationship="id-relation-acmeapp-id-process-ecommerce"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-40cd918e9d754a7f81042d3690780138" source="id-node-12" target="id-node-13" archimateRelationship="id-relation-8"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5dec1bf556bb4d2f9aaf9eabebd498e2" source="id-node-12" target="id-node-14" archimateRelationship="id-relation-9"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-4b07e1ded31b4dcb902148e517246294" source="id-node-12" target="id-node-15" archimateRelationship="id-relation-10"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-eb70156d83a342a08d445e957bff241d" source="id-node-12" target="id-node-16" archimateRelationship="id-relation-11"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-32836285bb1a4be7989f4e957a149670" source="id-node-12" target="id-node-17" archimateRelationship="id-relation-12"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-79b55c910d9f4ff685549b54ca5ff43b" source="id-node-12" target="id-node-18" archimateRelationship="id-relation-13"/>
+        <child xsi:type="archimate:DiagramObject" id="id-node-13" targetConnections="id-40cd918e9d754a7f81042d3690780138" archimateElement="id-event-8">
+          <bounds x="7" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-10" source="id-node-13" target="id-node-14" archimateRelationship="id-relation-be-9"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-14" targetConnections="id-connection-10 id-5dec1bf556bb4d2f9aaf9eabebd498e2" archimateElement="id-event-9">
+          <bounds x="223" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-11" source="id-node-14" target="id-node-15" archimateRelationship="id-relation-be-10"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-15" targetConnections="id-connection-11 id-4b07e1ded31b4dcb902148e517246294" archimateElement="id-event-10">
+          <bounds x="439" y="48" width="114" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-12" source="id-node-15" target="id-node-16" archimateRelationship="id-relation-be-11"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-16" targetConnections="id-connection-12 id-eb70156d83a342a08d445e957bff241d" archimateElement="id-event-11">
+          <bounds x="7" y="168" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-13" source="id-node-16" target="id-node-17" archimateRelationship="id-relation-be-12"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-17" targetConnections="id-connection-13 id-32836285bb1a4be7989f4e957a149670" archimateElement="id-event-12">
+          <bounds x="223" y="168" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-14" source="id-node-17" target="id-node-18" archimateRelationship="id-relation-be-13"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-18" targetConnections="id-connection-14 id-79b55c910d9f4ff685549b54ca5ff43b" archimateElement="id-event-13">
+          <bounds x="439" y="168" width="114" height="50"/>
+        </child>
+      </child>
+      <documentation>Process View Mined from API Logs for Business Actor acmeapp.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="API extracted process view for OpenApp" id="id-view-ea-OpenApp-process-view" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-node-19" targetConnections="id-connection-15 id-connection-20" archimateElement="id-actor-OpenApp">
+        <bounds x="22" y="250" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-20" archimateElement="id-process-handle-claim">
+        <bounds x="204" y="72" width="841" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-15" source="id-node-20" target="id-node-19" archimateRelationship="id-relation-OpenApp-id-process-handle-claim"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-3439a8f458fa4dc298130893f3bad377" source="id-node-20" target="id-node-21" archimateRelationship="id-relation-14"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-3837bf9c52d548039413925c0ee953c4" source="id-node-20" target="id-node-22" archimateRelationship="id-relation-15"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-01e8c7f11ee24105b59a4fe9488db1c0" source="id-node-20" target="id-node-23" archimateRelationship="id-relation-16"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-04a9f3b38fac4159bebb79b8fae057dc" source="id-node-20" target="id-node-24" archimateRelationship="id-relation-17"/>
+        <child xsi:type="archimate:DiagramObject" id="id-node-21" targetConnections="id-3439a8f458fa4dc298130893f3bad377" archimateElement="id-event-14">
+          <bounds x="36" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-16" source="id-node-21" target="id-node-22" archimateRelationship="id-relation-be-15"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-22" targetConnections="id-connection-16 id-3837bf9c52d548039413925c0ee953c4" archimateElement="id-event-15">
+          <bounds x="252" y="48" width="121" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-17" source="id-node-22" target="id-node-23" archimateRelationship="id-relation-be-16"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-23" targetConnections="id-connection-17 id-01e8c7f11ee24105b59a4fe9488db1c0" archimateElement="id-event-16">
+          <bounds x="480" y="48" width="121" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-18" source="id-node-23" target="id-node-24" archimateRelationship="id-relation-be-17"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-24" targetConnections="id-connection-18 id-04a9f3b38fac4159bebb79b8fae057dc" archimateElement="id-event-17">
+          <bounds x="708" y="48" width="121" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-19" source="id-node-24" target="id-node-26" archimateRelationship="id-relation-be-18"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-25" archimateElement="id-process-payment">
+        <bounds x="204" y="336" width="841" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-20" source="id-node-25" target="id-node-19" archimateRelationship="id-relation-OpenApp-id-process-payment"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ba21d06df1f9421db873a6345b6cb2de" source="id-node-25" target="id-node-26" archimateRelationship="id-relation-18"/>
+        <child xsi:type="archimate:DiagramObject" id="id-node-26" targetConnections="id-connection-19 id-ba21d06df1f9421db873a6345b6cb2de" archimateElement="id-event-18">
+          <bounds x="36" y="48" width="109" height="50"/>
+        </child>
+      </child>
+      <documentation>Process View Mined from API Logs for Business Actor OpenApp.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="API extracted process view for CamundaApp" id="id-view-ea-CamundaApp-process-view" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-node-27" targetConnections="id-connection-21 id-connection-26 id-connection-32" archimateElement="id-actor-CamundaApp">
+        <bounds x="25" y="375" width="120" height="50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-28" archimateElement="id-process-ProcessBusinessUnit1">
+        <bounds x="350" y="50" width="1031" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-21" source="id-node-28" target="id-node-27" archimateRelationship="id-relation-CamundaApp-id-process-ProcessBusinessUnit1"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-7ea186a3903c43909cdb4892b764cb13" source="id-node-28" target="id-node-29" archimateRelationship="id-relation-19"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d561a7df498748878064602a8cded5bb" source="id-node-28" target="id-node-30" archimateRelationship="id-relation-20"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9e3ef8bd74f74b8d961992cf679d0af7" source="id-node-28" target="id-node-31" archimateRelationship="id-relation-21"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9adcd1815fb04203bb093f5704799b4b" source="id-node-28" target="id-node-32" archimateRelationship="id-relation-28"/>
+        <child xsi:type="archimate:DiagramObject" id="id-node-29" targetConnections="id-7ea186a3903c43909cdb4892b764cb13" archimateElement="id-event-19">
+          <bounds x="12" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-22" source="id-node-29" target="id-node-30" archimateRelationship="id-relation-be-20"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-30" targetConnections="id-connection-22 id-d561a7df498748878064602a8cded5bb" archimateElement="id-event-20">
+          <bounds x="228" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-23" source="id-node-30" target="id-node-31" archimateRelationship="id-relation-be-21"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-31" targetConnections="id-connection-23 id-9e3ef8bd74f74b8d961992cf679d0af7" archimateElement="id-event-21">
+          <bounds x="444" y="48" width="109" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-24" source="id-node-31" target="id-node-32" archimateRelationship="id-relation-be-22"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-32" targetConnections="id-connection-24 id-9adcd1815fb04203bb093f5704799b4b" archimateElement="id-event-28">
+          <bounds x="660" y="48" width="133" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-25" source="id-node-32" target="id-node-34" archimateRelationship="id-relation-be-23"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-34" targetConnections="id-connection-25" archimateElement="id-event-22">
+          <bounds x="912" y="48" width="121" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-27" source="id-node-34" target="id-node-35" archimateRelationship="id-relation-be-24"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-33" archimateElement="id-process-ProcessBusinessUnit2">
+        <bounds x="350" y="300" width="1030" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-26" source="id-node-33" target="id-node-27" archimateRelationship="id-relation-CamundaApp-id-process-ProcessBusinessUnit2"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d71470ad133b4af88c4aa29152f404fa" source="id-node-33" target="id-node-35" archimateRelationship="id-relation-23"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-407cff17aa924adfa4cb2931248d6a0f" source="id-node-33" target="id-node-36" archimateRelationship="id-relation-26"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-62154ccdc50f4ba69c0fc05e3ca386d3" source="id-node-33" target="id-node-37" archimateRelationship="id-relation-27"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-b7b49f795dc94734bce453ca9ca59ed0" source="id-node-33" target="id-node-38" archimateRelationship="id-relation-29"/>
+        <child xsi:type="archimate:DiagramObject" id="id-node-35" targetConnections="id-connection-27 id-d71470ad133b4af88c4aa29152f404fa" archimateElement="id-event-23">
+          <bounds x="12" y="60" width="108" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-28" source="id-node-35" target="id-node-36" archimateRelationship="id-relation-be-25"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-36" targetConnections="id-connection-28 id-407cff17aa924adfa4cb2931248d6a0f" archimateElement="id-event-26">
+          <bounds x="240" y="60" width="132" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-29" source="id-node-36" target="id-node-37" archimateRelationship="id-relation-be-26"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-37" targetConnections="id-connection-29 id-62154ccdc50f4ba69c0fc05e3ca386d3" archimateElement="id-event-27">
+          <bounds x="492" y="60" width="144" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-30" source="id-node-37" target="id-node-38" archimateRelationship="id-relation-be-27"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-38" targetConnections="id-connection-30 id-b7b49f795dc94734bce453ca9ca59ed0" archimateElement="id-event-29">
+          <bounds x="756" y="60" width="120" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-31" source="id-node-38" target="id-node-40" archimateRelationship="id-relation-be-28"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-node-39" archimateElement="id-process-ProcessBusinessUnit3">
+        <bounds x="350" y="550" width="1030" height="150"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-connection-32" source="id-node-39" target="id-node-27" archimateRelationship="id-relation-CamundaApp-id-process-ProcessBusinessUnit3"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-310b96e77c7d446c932a1d0a20f89ce3" source="id-node-39" target="id-node-41" archimateRelationship="id-relation-25"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9ba2c745a01f4fcdb92ec68dabb750cf" source="id-node-39" target="id-node-40" archimateRelationship="id-relation-24"/>
+        <child xsi:type="archimate:DiagramObject" id="id-node-41" targetConnections="id-connection-33 id-310b96e77c7d446c932a1d0a20f89ce3" archimateElement="id-event-25">
+          <bounds x="276" y="48" width="144" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-node-40" targetConnections="id-connection-31 id-9ba2c745a01f4fcdb92ec68dabb750cf" archimateElement="id-event-24">
+          <bounds x="12" y="48" width="132" height="50"/>
+          <sourceConnection xsi:type="archimate:Connection" id="id-connection-33" source="id-node-40" target="id-node-41" archimateRelationship="id-relation-be-29"/>
+        </child>
+      </child>
+      <documentation>Process View Mined from API Logs for Business Actor CamundaApp.</documentation>
+    </element>
+  </folder>
+  <purpose>Model generated by IA mining process to be imported in ArchiMate Tool.</purpose>
+</archimate:model>

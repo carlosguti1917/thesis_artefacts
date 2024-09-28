@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="EA Mining Exchange Model" id="id-ea-mining-exchange-model-1" version="5.0.0">
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Evaluation Extrations" id="id-ea-mining-exchange-model-1" version="5.0.0">
   <folder name="Strategy" id="id-521da182c56549658f175d902f42b3cd" type="strategy"/>
   <folder name="Business" id="id-16eae1622f264225a064d0351fb48dfc" type="business">
     <element xsi:type="archimate:BusinessProcess" name="Process_Application" id="id-process-Process_Application"/>

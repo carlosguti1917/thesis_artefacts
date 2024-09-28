@@ -107,13 +107,13 @@
     <element xsi:type="archimate:DataObject" name="Customer" id="id-entity-1"/>
     <element xsi:type="archimate:DataObject" name="Process Insurance" id="id-domain-2"/>
     <element xsi:type="archimate:DataObject" name="Consultant" id="id-entity-2"/>
-    <element xsi:type="archimate:DataObject" name="Process Business Unit" id="id-domain-3"/>
+    <element xsi:type="archimate:DataObject" name="Process Business 1" id="id-domain-3"/>
     <element xsi:type="archimate:DataObject" name="Shop" id="id-entity-3"/>
     <element xsi:type="archimate:DataObject" name="Association" id="id-entity-4"/>
-    <element xsi:type="archimate:DataObject" name="Process Business Unit" id="id-domain-4"/>
+    <element xsi:type="archimate:DataObject" name="Process Business 2" id="id-domain-4"/>
     <element xsi:type="archimate:DataObject" name="Card" id="id-entity-5"/>
     <element xsi:type="archimate:DataObject" name="Purchase" id="id-entity-6"/>
-    <element xsi:type="archimate:DataObject" name="Process Business Unit" id="id-domain-5"/>
+    <element xsi:type="archimate:DataObject" name="Process Business 3" id="id-domain-5"/>
     <element xsi:type="archimate:DataObject" name="Handle Claim" id="id-domain-6"/>
     <element xsi:type="archimate:DataObject" name="Claims" id="id-entity-7"/>
     <element xsi:type="archimate:DataObject" name="Capture Informations" id="id-entity-8"/>
@@ -375,14 +375,14 @@
         <sourceConnection xsi:type="archimate:Connection" id="id-connection-34" source="id-node-42" target="id-node-43" archimateRelationship="id-relation-de-1"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-node-43" targetConnections="id-connection-34" archimateElement="id-entity-1">
-        <bounds x="500" y="110" width="120" height="50"/>
+        <bounds x="500" y="60" width="120" height="50"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-node-44" archimateElement="id-domain-2">
         <bounds x="250" y="160" width="120" height="50"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-connection-35" source="id-node-44" target="id-node-45" archimateRelationship="id-relation-de-2"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-node-45" targetConnections="id-connection-35" archimateElement="id-entity-2">
-        <bounds x="500" y="210" width="120" height="50"/>
+        <bounds x="500" y="160" width="120" height="50"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-node-46" archimateElement="id-domain-3">
         <bounds x="250" y="310" width="120" height="50"/>
@@ -407,7 +407,7 @@
         <bounds x="500" y="610" width="120" height="50"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-node-52" archimateElement="id-domain-5">
-        <bounds x="250" y="610" width="120" height="50"/>
+        <bounds x="250" y="696" width="120" height="50"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-node-53" archimateElement="id-domain-6">
         <bounds x="250" y="860" width="120" height="50"/>
